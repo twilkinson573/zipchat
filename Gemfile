@@ -16,7 +16,7 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 
-gem 'devise'
+gem 'devise', :git => 'git://github.com/plataformatec/devise.git'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
