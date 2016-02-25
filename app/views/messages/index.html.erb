@@ -1,0 +1,14 @@
+<h1>Chat History:</h1>
+
+<%= link_to 'Back', conversations_path %>
+
+<ul>
+  <% @messages.each do |message| %>
+    <li>
+      <p>
+        <%= User.find(message.user_id).email %>:
+        <%= message.body %>  
+      </p>
+    </li>
+  <% end %>
+</ul>

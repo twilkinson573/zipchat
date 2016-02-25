@@ -1,0 +1,10 @@
+<h1>Chats:</h1>
+
+<ul>
+  <% @conversations.each do |conversation| %>
+    <li>
+      <% conversation.sender_id == current_user.id ? partner = User.find(conversation.recipient_id) : partner = User.find(conversation.sender_id) %>
+      <%= link_to partner.email, conversation_messages_path(conversation) %>
+    </li>
+  <% end %>
+</ul>
