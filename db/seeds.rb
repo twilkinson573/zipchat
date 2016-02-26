@@ -9,13 +9,13 @@
 User.delete_all
 
 u1 = User.create(email:'thomas@cool.com', password:'zipchatpassword',
-            first_name:'Thomas', surname:'Wilkinson')
+            first_name:'Thomas', surname:'Wilkinson', username: 'thomasw')
 u2 = User.create(email:'tdog@awesome.com', password:'zipchatpassword',
-            first_name:'Finn', surname:'Human')
+            first_name:'Finn', surname:'Human', username: 'finnh')
 u3 = User.create(email:'money@booyah.com', password:'zipchatpassword',
-            first_name:'Jake', surname:'Dog')
+            first_name:'Jake', surname:'Dog', username: 'jakethedog')
 u4 = User.create(email:'satan@adventuretime.com', password:'zipchatpassword',
-            first_name:'Princess', surname:'Bubblegum')
+            first_name:'Princess', surname:'Bubblegum', username: 'pbubbles')
 
 puts 'Added 4 new users'
 
