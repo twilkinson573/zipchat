@@ -13,12 +13,7 @@
   <% end %>
 </ul>
 
-<!-- Current user exists here -->
-<%= current_user.id %>
-
 <%= simple_form_for [@conversation, @message] do |f| %>
   <%= f.input :body %>
-  <!-- Current user not available? here -->
-  <%= f.input :user_id, as: :hidden, value: current_user.id %>
   <%= f.submit %>
 <% end %>

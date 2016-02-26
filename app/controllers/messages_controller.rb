@@ -6,11 +6,13 @@ class MessagesController < ApplicationController
     update_read_status unless @messages.empty?
 
     @message = @conversation.messages.new
+    @user = current_user
   end
 
   def create
     @message = Message.new(message_params)
     @message.conversation_id = @conversation.id
+    @message.user_id = current_user.id
     if @message.save!
       redirect_to conversation_messages_path(@conversation)
     end
