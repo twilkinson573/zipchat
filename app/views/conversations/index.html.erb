@@ -1,5 +1,7 @@
 <h1>Chats:</h1>
 
+<%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
+
 <ul>
   <% @conversations.each do |conversation| %>
     <li>

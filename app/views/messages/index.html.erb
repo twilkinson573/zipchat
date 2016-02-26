@@ -6,7 +6,7 @@
   <% @messages.each do |message| %>
     <li>
       <p>
-        <%= User.find(message.user_id).email %>:
+        <b><%= User.find(message.user_id).first_name %>:</b>
         <%= message.body %>  
       </p>
     </li>
