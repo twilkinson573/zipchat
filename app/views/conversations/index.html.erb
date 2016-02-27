@@ -2,7 +2,6 @@
 
 <%= simple_form_for @conversation do |f| %>
   <%= f.collection_select :recipient_id, @users, :id, :username %>
-  <%= f.input :sender_id, as: :hidden, value: @current_user.id %>
   <%= f.submit %>
 <% end %>
 

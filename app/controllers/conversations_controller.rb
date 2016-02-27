@@ -1,7 +1,7 @@
 class ConversationsController < ApplicationController
   def index
     @conversations = Conversation.where('sender_id= ? OR recipient_id= ?', current_user.id, current_user.id)
-    @users = User.all
+    @users = User.all.reject{ |user| user.id == current_user.id }
     @sender_id = current_user.id
 
     @conversation = Conversation.new
